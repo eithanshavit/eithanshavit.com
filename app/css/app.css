@@ -1,0 +1,186 @@
+
+body {
+   overflow-y: scroll;
+   background: #DFEBD3;
+   margin: 0px;
+   padding: 0px;
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+p {
+   font-size: 27px;
+}
+
+#top-container {
+   position: relative;
+}
+
+/* side navigation */
+
+#nav { 
+   height:100%;
+   position:fixed; 
+   width:250px;
+   background: #D8E0CE;
+}
+
+#nav ul { 
+   padding:0 0;
+}
+
+#nav a { 
+   margin:15px 0px;
+   color: #fff;
+}
+
+#nav li { 
+   text-align: center;
+   padding:25px 0;
+   font-size: 30px;
+}
+
+#nav-about.nav-active {
+   background: #000000;
+}
+
+#nav-about:hover {
+   background: #000000;
+}
+
+#nav-websites.nav-active {
+   background: #28C00B;
+}
+
+#nav-websites:hover {
+   background: #28C00B;
+}
+
+#nav-apps.nav-active {
+   background: #2B87EB;
+}
+
+#nav-apps:hover {
+   background: #2B87EB;
+}
+
+#nav-hardware.nav-active {
+   background: #E91CE1;
+}
+
+#nav-hardware:hover {
+   background: #E91CE1;
+}
+
+#nav-photography.nav-active{
+   background: #00E7B0;
+}
+
+#nav-photography:hover {
+   background: #00E7B0;
+}
+
+#nav-github.nav-active {
+   background: #E7DE00;
+}
+
+#nav-github:hover {
+   background: #E7DE00;
+}
+
+#logo {
+   padding: 20px 0 10px 0;
+   margin: auto;
+   max-width: 100px;
+}
+
+#logo img{
+}
+
+.menu {
+}
+
+/* Main content */
+#content {
+   margin-left: 250px;
+   padding: 20px 70px 20px 60px;;
+}
+
+/* Animations */
+.view-animate-container {
+   position:relative;
+}
+
+.view-animate {
+   position:absolute;
+   top:0;
+   left:0;
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s;
+}
+
+.view-animate.ng-enter {
+  opacity:0;
+}
+.view-animate.ng-enter.ng-enter-active {
+  opacity:100;
+}
+.view-animate.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.section {
+   padding-bottom: 50px;
+}
+
+#content a{
+   color: #CE0063;
+}
+
+#content a:hover {
+   color: #21BB46;
+}
+
+.section a{
+	font-size: 25px;
+}
+
+/* From old site */
+#logo-container {
+	padding-bottom:40px;
+	padding-top:30px;
+}
+#logo-container a{
+	font-size: 22px;
+   color: #00B87D;
+}
+
+#logo-container a:hover {
+	color: #3d3d3d;
+	color: #A3FF00;
+}
+
+#body {
+	padding:10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.entry-logo {
+	max-width:60px;
+   margin-right: 32px;
+}
+
+h1 {
+	font-size: 34px;
+   font-weight: normal;
+   color: #3A6800;
+}
+
+.textual-email {
+   color: #C12EE5;
+}
