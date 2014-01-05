@@ -4,28 +4,30 @@
    <meta charset="utf-8">
    <title>Eithan Shavit</title>
    <link rel="stylesheet" href="css/app.css"/>
-   <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+   <!-- jQuery -->
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <!-- fancyBox -->
+   <link rel="stylesheet" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+   <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+   <!-- favicon -->
+   <link rel="shortcut icon" href="img/favicon_alef.png">
 </head>
 <body>
    <div ng-controller="MainCtrl as main">
-      <div id="top-container">
+      <div id="main-container">
          <div id="nav">
             <div id='logo'>
                <img id='logo' ng-src="img/logo.png">
             </div>
-            <ul>
-               <li ng-repeat="button in navButtons" id="{{button.style}}" class="{{button.name == main.$routeParams['categoryId'] ? 'nav-active' : ''}}" >
-                  <a href="#/{{button.url}}">{{button.name}}</a>
-               </li>
-            </ul>
+            <a ng-repeat="button in navButtons" id="{{button.style}}" class="{{isButtonActive(button.name) ? 'nav-active' : ''}}" href="#/{{button.url}}">{{button.name}}</a>
          </div>
          <div id="content">
             <div class="view-animate-container">
-              <div ng-view class="view-animate"></div>
+               <div ng-view class="view-animate">
+               </div>
             </div>
          </div>
       </div>
-
    </div>
    <script src="lib/angular/angular.js"></script>
    <script src="lib/angular/angular-route.js"></script>

@@ -4,8 +4,9 @@
 
 var esApp = angular.module('eithanshavit.controllers', []);
 
-esApp.controller('MainCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+esApp.controller('MainCtrl', ['$route', '$scope', '$http', '$routeParams', function($route, $scope, $http, $routeParams){
    this.$routeParams = $routeParams;
+   this.$route = $route;
    $scope.navButtons = [
       { 
          'name': 'about',
@@ -38,9 +39,36 @@ esApp.controller('MainCtrl', ['$scope', '$http', '$routeParams', function($scope
          'style': 'nav-github'
       },
    ];
-      
-  }]);
-
-esApp.controller('HwCtrl', [function() {
-
+   $scope.images = {
+      "final" : [
+         { "url" : "img/vc/vc_front.jpg"},
+         { "url" : "img/vc/vc_frontclose.jpg"},
+         { "url" : "img/vc/vc_frontclose2.jpg"},
+      ],
+      "hardware" : [
+         { "url" : "img/vc/vc_layout.png"},
+         { "url" : "img/vc/vc_schematics.png"},
+         { "url" : "img/vc/vc_pcb.jpg"},
+         { "url" : "img/vc/vc_assembled.jpg"},
+         { "url" : "img/vc/vc_witharduino.jpg"},
+      ],
+      "plastic" : [
+         { "url" : "img/vc/vc_wordpanel.jpg"},
+         { "url" : "img/vc/vc_holepanel.jpg"},
+         { "url" : "img/vc/vc_cutout.jpg"},
+      ],
+      "craft" : [
+         { "url" : "img/vc/vc_leds.jpg"},
+         { "url" : "img/vc/vc_finalback.jpg"},
+      ],
+   }
+   $scope.isButtonActive = function(buttonName){
+      console.log( buttonName );
+      console.log( $routeParams['categoryId'] );
+      if ( $routeParams['categoryId'] == 'photography' ||
+           $routeParams['categoryId'] == 'github' ) {
+         return ( buttonName == 'photography' || buttonName == 'github' );
+      }
+      return buttonName == $routeParams['categoryId'];
+   }
   }]);
