@@ -1,4 +1,32 @@
-﻿<center>
-<img ng-src="http://farm8.staticflickr.com/7331/9313589576_d68e584bc7_m.jpg" width="161" height="240" />
-	<p>I love taking photos around the world,<br>check some of them out on my <a href="http://www.flickr.com/photos/eithanshavit/sets/">Flickr page</a></p>
-</center>
+﻿<h1>Coming soon...</h1><p>Some dummy photos for now to test my gallery view.<br>
+Or, check out my <a target="_blank" href="http://www.flickr.com/photos/eithanshavit/sets/">Flickr page</a>.</p>
+<div id="gallery-container">
+   <ul>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/200/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/130/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/320/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/140/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/168/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/290/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/132/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/332/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/290/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/138/140/"></li>
+      <li class="is-loading"><img ng-src="http://lorempixel.com/g/319/140/"></li>
+   </ul>
+</div>
+<script>
+   $(function() {
+      var container = $('#gallery-container');
+      var imgLoad = imagesLoaded( container );
+      imgLoad.on( 'progress', onProgress );
+
+      // triggered after each item is loaded
+      function onProgress( imgLoad, image ) {
+        // change class if the image is loaded or broken
+        image.img.parentNode.className = image.isLoaded ? '' : 'is-broken';
+      }
+
+   });
+
+</script>

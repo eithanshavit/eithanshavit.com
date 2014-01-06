@@ -14,9 +14,6 @@ var appModule = angular.module('eithanshavit', [
 appModule.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/:categoryId', {
       templateUrl: function(params) {
-         if (params.categoryId == 'photography' || params.categoryId == 'github' ) {
-            return "partials/links.html";
-         }
          return "partials/" + params.categoryId + ".html";
       },
   });

@@ -63,12 +63,6 @@ esApp.controller('MainCtrl', ['$route', '$scope', '$http', '$routeParams', funct
       ],
    }
    $scope.isButtonActive = function(buttonName){
-      console.log( buttonName );
-      console.log( $routeParams['categoryId'] );
-      if ( $routeParams['categoryId'] == 'photography' ||
-           $routeParams['categoryId'] == 'github' ) {
-         return ( buttonName == 'photography' || buttonName == 'github' );
-      }
       return buttonName == $routeParams['categoryId'];
    }
   }]);
