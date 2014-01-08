@@ -8,15 +8,25 @@
    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
    <!-- fancyBox -->
    <link rel="stylesheet" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+   <link rel="stylesheet" href="lib/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
    <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+   <script type="text/javascript" src="lib/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
    <!-- imagesLoaded -->
    <script type="text/javascript" src="lib/imagesLoaded/imagesloaded.pkgd.js"></script>
    <!-- favicon -->
    <link rel="shortcut icon" href="img/favicon_alef.png">
+   <script src="lib/angular/angular.js"></script>
+   <script src="lib/angular/angular-route.js"></script>
+   <script src="lib/angular/angular-animate.js"></script>
+   <script src="js/app.js"></script>
+   <script src="js/services.js"></script>
+   <script src="js/controllers.js"></script>
+   <script src="js/filters.js"></script>
+   <script src="js/directives.js"></script>
 </head>
 <body>
    <div ng-controller="MainCtrl as main">
-      <div id="main-container">
+      <div id="main-container" class="ng-cloak">
          <div id="nav">
             <div id='logo'>
                <img id='logo' ng-src="img/logo.png">
@@ -31,13 +41,5 @@
          </div>
       </div>
    </div>
-   <script src="lib/angular/angular.js"></script>
-   <script src="lib/angular/angular-route.js"></script>
-   <script src="lib/angular/angular-animate.js"></script>
-   <script src="js/app.js"></script>
-   <script src="js/services.js"></script>
-   <script src="js/controllers.js"></script>
-   <script src="js/filters.js"></script>
-   <script src="js/directives.js"></script>
 </body>
 </html>

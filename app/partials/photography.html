@@ -1,18 +1,10 @@
-﻿<h1>Coming soon...</h1><p>Some dummy photos for now to test my gallery view.<br>
-Or, check out my <a target="_blank" href="http://www.flickr.com/photos/eithanshavit/sets/">Flickr page</a>.</p>
+﻿<h1>Some random photos</h1><p>This is a collection of some photos I took while travelling in Asia. I'll upload more albums in the near future.<br>
+You can also check out my <a target="_blank" href="http://www.flickr.com/photos/eithanshavit/sets/">Flickr page</a>.</p>
 <div id="gallery-container">
    <ul>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/200/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/130/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/320/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/140/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/168/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/290/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/132/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/332/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/290/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/138/140/"></li>
-      <li class="is-loading"><img ng-src="http://lorempixel.com/g/319/140/"></li>
+      <li class="is-loading" ng-repeat="image in galleryImages">
+         <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+      </li>
    </ul>
 </div>
 <script>
@@ -29,4 +21,20 @@ Or, check out my <a target="_blank" href="http://www.flickr.com/photos/eithansha
 
    });
 
+</script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('.fancybox').fancybox({
+        padding: 0,
+        helpers: {
+          overlay: {
+            locked: false
+          },
+          thumbs : {
+            width: 50,
+            height: 50,
+          }
+        }
+      });
+   });
 </script>

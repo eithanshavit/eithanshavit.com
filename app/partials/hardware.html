@@ -1,6 +1,13 @@
 ﻿<script type="text/javascript">
    $(document).ready(function() {
-      $(".fancybox").fancybox();
+      $('.fancybox').fancybox({
+        padding: 0,
+        helpers: {
+          overlay: {
+            locked: false
+          }
+        }
+      });
    });
 </script>
 <div class="post">
@@ -34,7 +41,7 @@
          <center>
             <table>
                <tr >
-                  <td ng-repeat="image in images['final']">
+                  <td ng-repeat="image in verbalClockImages['final']">
                      <a class="fancybox" href="{{image.url}}" rel="lightbox[final]"><img style="width:100px" ng-src="{{image.url}}" alt="" /></a>
                   </td>
                </tr>
@@ -78,7 +85,7 @@
          <center>
             <table>
                <tr >
-                  <td ng-repeat="image in images['hardware']">
+                  <td ng-repeat="image in verbalClockImages['hardware']">
                      <a class="fancybox" href="{{image.url}}" rel="lightbox[hardware]"><img style="width:100px" ng-src="{{image.url}}" alt="" /></a>
                   </td>
                </tr>
@@ -92,7 +99,7 @@
          <center>
             <table>
                <tr >
-                  <td ng-repeat="image in images['plastic']">
+                  <td ng-repeat="image in verbalClockImages['plastic']">
                      <a class="fancybox" href="{{image.url}}" rel="lightbox[plastics]"><img style="width:100px" ng-src="{{image.url}}" alt="" /></a>
                   </td>
                </tr>
@@ -106,7 +113,7 @@
          <center>
             <table>
                <tr >
-                  <td ng-repeat="image in images['craft']">
+                  <td ng-repeat="image in verbalClockImages['craft']">
                      <a class="fancybox" href="{{image.url}}" rel="lightbox[craft]"><img style="width:100px" ng-src="{{image.url}}" alt="" /></a>
                   </td>
                </tr>

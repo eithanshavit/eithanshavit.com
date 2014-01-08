@@ -39,30 +39,20 @@ esApp.controller('MainCtrl', ['$route', '$scope', '$http', '$routeParams', funct
          'style': 'nav-github'
       },
    ];
-   $scope.images = {
-      "final" : [
-         { "url" : "img/vc/vc_front.jpg"},
-         { "url" : "img/vc/vc_frontclose.jpg"},
-         { "url" : "img/vc/vc_frontclose2.jpg"},
-      ],
-      "hardware" : [
-         { "url" : "img/vc/vc_layout.png"},
-         { "url" : "img/vc/vc_schematics.png"},
-         { "url" : "img/vc/vc_pcb.jpg"},
-         { "url" : "img/vc/vc_assembled.jpg"},
-         { "url" : "img/vc/vc_witharduino.jpg"},
-      ],
-      "plastic" : [
-         { "url" : "img/vc/vc_wordpanel.jpg"},
-         { "url" : "img/vc/vc_holepanel.jpg"},
-         { "url" : "img/vc/vc_cutout.jpg"},
-      ],
-      "craft" : [
-         { "url" : "img/vc/vc_leds.jpg"},
-         { "url" : "img/vc/vc_finalback.jpg"},
-      ],
-   }
+
+   $http.get('models/gallery.json').success(function(data) {
+       $scope.galleryImages = shuffle(data);
+   });
+
+   $http.get('models/verbalClockImages.json').success(function(data) {
+       $scope.verbalClockImages = data;
+   });
    $scope.isButtonActive = function(buttonName){
       return buttonName == $routeParams['categoryId'];
-   }
+   };
   }]);
+
+function shuffle(o) {
+   for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+   return o;
+};

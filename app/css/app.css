@@ -119,6 +119,7 @@ body {
 
 #content p {
    font-size: 23px;
+   line-height: 33px;
 }
 
 #content a{
@@ -170,7 +171,6 @@ body {
    float: left;
    width: 700px;
    display: block;
-   line-height: 38px;
 }
 .post-clear {
    clear: both;
@@ -254,7 +254,7 @@ h1 {
 
 #gallery-container li {
   height: 140px;
-  min-width: 100px;
+  min-width: 70px;
   display: block;
   float: left;
   list-style: none;
@@ -262,4 +262,8 @@ h1 {
   background-color: black;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+#gallery-container img {
+  height: 140px;
 }
