@@ -40,7 +40,7 @@ esApp.controller('MainCtrl', ['$route', '$scope', '$http', '$routeParams', funct
       },
    ];
 
-   $http.get('models/gallery.json').success(function(data) {
+   $http.get('models/galleryImages.json').success(function(data) {
        $scope.galleryImages = shuffle(data);
    });
 
