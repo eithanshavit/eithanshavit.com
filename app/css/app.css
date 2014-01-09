@@ -9,7 +9,7 @@ body {
    background: #ffffff;
    margin: 0px;
    padding: 0px;
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-family: "HelveticaNeue-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
 #main-container {
@@ -103,7 +103,8 @@ body {
    max-width: 100px;
 }
 
-#logo img{
+#logo a{
+   padding: 0;
 }
 
 .menu {
@@ -199,6 +200,13 @@ h1 {
    font-weight: normal;
    margin: 0 0;
    color: #000000;
+}
+
+h2 {
+	font-size: 34px;
+   font-weight: normal;
+   margin: 0 0;
+   color: #55a4b4;
 }
 
 .textual-email {

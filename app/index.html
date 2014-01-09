@@ -29,7 +29,7 @@
       <div id="main-container" class="ng-cloak">
          <div id="nav">
             <div id='logo'>
-               <img id='logo' ng-src="img/logo.png">
+               <a href="#/about"><img id='logo' ng-src="img/logo.png"></a>
             </div>
             <a ng-repeat="button in navButtons" id="{{button.style}}" class="{{isButtonActive(button.name) ? 'nav-active' : ''}}" href="#/{{button.url}}">{{button.name}}</a>
          </div>
