@@ -4,7 +4,7 @@
 
 var esApp = angular.module('eithanshavit.controllers', []);
 
-esApp.controller('MainCtrl', ['$location', '$anchorScroll', '$route', '$scope', '$http', '$routeParams', function($location, $anchorScroll, $route, $scope, $http, $routeParams){
+esApp.controller('MainCtrl', ['$rootScope', '$location', '$anchorScroll', '$route', '$scope', '$http', '$routeParams', function($rootScope, $location, $anchorScroll, $route, $scope, $http, $routeParams){
    this.$routeParams = $routeParams;
    this.$route = $route;
 
@@ -12,9 +12,18 @@ esApp.controller('MainCtrl', ['$location', '$anchorScroll', '$route', '$scope', 
        var old = $location.hash();
        $location.hash(id);
        $anchorScroll();
-       //reset to old to keep any additional routing logic from kicking in
+       // Reset to old to keep any additional routing logic from kicking in
        $location.hash(old);
    };
+
+   // When the route is changed scroll to top of page
+   /*
+   $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+      console.log("routechange");
+      $location.hash('nav');
+      $anchorScroll();  
+   });
+   */
 
    $scope.navButtons = [
       { 
