@@ -4,9 +4,18 @@
 
 var esApp = angular.module('eithanshavit.controllers', []);
 
-esApp.controller('MainCtrl', ['$route', '$scope', '$http', '$routeParams', function($route, $scope, $http, $routeParams){
+esApp.controller('MainCtrl', ['$location', '$anchorScroll', '$route', '$scope', '$http', '$routeParams', function($location, $anchorScroll, $route, $scope, $http, $routeParams){
    this.$routeParams = $routeParams;
    this.$route = $route;
+
+   $scope.scrollTo = function(id) {
+       var old = $location.hash();
+       $location.hash(id);
+       $anchorScroll();
+       //reset to old to keep any additional routing logic from kicking in
+       $location.hash(old);
+   };
+
    $scope.navButtons = [
       { 
          'name': 'about',
