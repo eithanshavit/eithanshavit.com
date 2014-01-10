@@ -40,11 +40,19 @@ esApp.controller('MainCtrl', ['$route', '$scope', '$http', '$routeParams', funct
       },
    ];
 
-   $http.get('models/galleryImages.json').success(function(data) {
-       $scope.galleryImages = shuffle(data);
+   $http.get('models/gallery_east.json').success(function(data) {
+       $scope.galleryEastImages = shuffle(data);
    });
 
-   $http.get('models/verbalClockImages.json').success(function(data) {
+   $http.get('models/gallery_israel.json').success(function(data) {
+       $scope.galleryIsraelImages = shuffle(data);
+   });
+
+   $http.get('models/gallery_more.json').success(function(data) {
+       $scope.galleryMoreImages = shuffle(data);
+   });
+
+   $http.get('models/gallery_verbalClock.json').success(function(data) {
        $scope.verbalClockImages = data;
    });
    $scope.isButtonActive = function(buttonName){

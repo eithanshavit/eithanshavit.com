@@ -243,6 +243,17 @@ h2 {
 /* End Animation */
 
 /* Gallery */
+
+#gallery-container {
+  margin: 20px 0 30px 0;
+  overflow: auto;
+}
+#gallery-links {
+  margin: 0 0 30px 0;
+}
+#gallery-links a{
+  margin: 0 0px 0px 4px;
+}
 #gallery-container .is-loading {
   background-color: black;
   background-image: url('../img/loading.gif');

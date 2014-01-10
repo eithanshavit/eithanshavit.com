@@ -1,12 +1,37 @@
-﻿<h1>Some random photos</h1><p>This is a collection of some photos I took while travelling in Asia. I'll upload more albums in the near future.<br>
-You can also check out my <a target="_blank" href="http://www.flickr.com/photos/eithanshavit/sets/">Flickr page</a>.</p>
+﻿<div id="gallery-links">
+   Albums: 
+   <a href="#/photography#asia">Asia</a>
+   <a href="#/photography#israel">Israel</a>
+   <a href="#/photography#more">More</a>
+</div>
+<a id="asia"><h1>Photos I took while travelling in Asia</h1></a>
 <div id="gallery-container">
    <ul>
-      <li class="is-loading" ng-repeat="image in galleryImages">
+      <li class="is-loading" ng-repeat="image in galleryEastImages">
          <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
       </li>
    </ul>
 </div>
+<a id="israel"><h1>From around Israel</h1></a>
+<div id="gallery-container">
+   <ul>
+      <li class="is-loading" ng-repeat="image in galleryIsraelImages">
+         <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+      </li>
+   </ul>
+</div>
+<a id="more"><h1>Some more photos</h1></a>
+<div id="gallery-container">
+   <ul>
+      <li class="is-loading" ng-repeat="image in galleryMoreImages">
+         <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+      </li>
+   </ul>
+</div>
+<h2>Even more on my <a target="_blank" href="http://www.flickr.com/photos/eithanshavit/sets/">Flickr page</a>.</h2>
+<br>
+<br>
+<br>
 <script>
    $(function() {
       var container = $('#gallery-container');
