@@ -48,6 +48,16 @@ body {
    color: #fff;
 }
 
+#nav-woodcraft.nav-active {
+   background: #FF4A4A;
+   color: #fff;
+}
+
+#nav-woodcraft:hover {
+   background: #FF4A4A;
+   color: #fff;
+}
+
 #nav-websites.nav-active {
    background: #28C00B;
    color: #fff;
@@ -145,6 +155,18 @@ body {
 
 .post {
    padding-bottom: 60px;
+   overflow: auto;
+}
+
+.posts-brief {
+   padding: 0px 0px 20px 0px;
+   margin: 0px 0px 0px 0px;
+   overflow: auto;
+}
+
+.posts-brief p{
+   padding: 0px;
+   margin: 0px;
    overflow: auto;
 }
 
