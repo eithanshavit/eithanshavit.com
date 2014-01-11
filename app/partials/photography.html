@@ -1,11 +1,11 @@
-﻿<div id="gallery-links">
+﻿<div class="gallery-links">
    Albums: 
    <a ng-click="scrollTo('asia')">Asia</a>
    <a ng-click="scrollTo('israel')">Israel</a>
    <a ng-click="scrollTo('more')">More</a>
 </div>
 <a id="asia"><h1>Some photos I took while travelling in Asia</h1></a>
-<div id="gallery-container">
+<div class="gallery-container">
    <ul>
       <li class="is-loading" ng-repeat="image in galleryEastImages">
          <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
@@ -13,7 +13,7 @@
    </ul>
 </div>
 <a id="israel"><h1>From around Israel</h1></a>
-<div id="gallery-container">
+<div class="gallery-container">
    <ul>
       <li class="is-loading" ng-repeat="image in galleryIsraelImages">
          <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
@@ -21,7 +21,7 @@
    </ul>
 </div>
 <a id="more"><h1>Some more photos</h1></a>
-<div id="gallery-container">
+<div class="gallery-container">
    <ul>
       <li class="is-loading" ng-repeat="image in galleryMoreImages">
          <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
@@ -34,7 +34,7 @@
 <br>
 <script>
    $(function() {
-      var container = $('#gallery-container');
+      var container = $('.gallery-container');
       var imgLoad = imagesLoaded( container );
       imgLoad.on( 'progress', onProgress );
 

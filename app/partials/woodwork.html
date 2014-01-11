@@ -1,0 +1,56 @@
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('.fancybox').fancybox({
+        padding: 0,
+        helpers: {
+          overlay: {
+            locked: false
+          }
+        }
+      });
+   });
+</script>
+<script>
+   $(function() {
+      var container = $('.gallery-container');
+      var imgLoad = imagesLoaded( container );
+      imgLoad.on( 'progress', onProgress );
+
+      // triggered after each item is loaded
+      function onProgress( imgLoad, image ) {
+        // change class if the image is loaded or broken
+        image.img.parentNode.className = image.isLoaded ? '' : 'is-broken';
+      }
+
+   });
+
+</script>
+
+<div class="posts-brief">
+<p>Lately I started doing some woodworking, something I wanted to do forever but never did. I was looking for classes around San Francisco but most of them did not fit my schedule. So I became a member of <a target="_blank" href="http://techshop.ws/">TechShop</a>, a place where I can learn and experiment with many different tools. One very cool techonology they have is the <a target="_blank" href="http://www.shopbottools.com/">ShopBot</a>. It's a <a target="_blank" href="http://en.wikipedia.org/wiki/CNC_router">CNC router</a>, which gives me the ability to use my computer design skills in order to curve wood to complex shapes that would otherwise be very difficult for me to achieve. I'm still experimenting with it.</p>
+</div>
+<div class="post">
+   <div class="post-intro">
+      <div class="post-logo">
+         <img alt="" ng-src="img/woodwork/3lights_logo.png"/>
+      </div>
+      <div class="post-desc">
+         <ul>
+            <li>2014</li>
+            <li>Shopbot CNC Router</li>
+         </ul>
+      </div>
+   </div>
+   <div class="post-content">
+      <h1>3 Light Bathroom Fixture</h1>
+      <p>This is a single piece of wood cut using the ShopBot. To house the light bulbs
+      I used parts of 3 simple ceramic bulb holders from the hardware store.</p>
+      <div class="post-gallery gallery-container">
+         <ul>
+            <li class="is-loading" ng-repeat="image in woodworkImages['3lights']">
+               <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
