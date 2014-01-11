@@ -1,0 +1,20 @@
+{
+   "3lights" : [
+      { 
+         "url" : "img/woodwork/3lights1.jpg",
+         "thumbUrl" : "img/woodwork/3lights1.jpg"
+      },
+      { 
+         "url" : "img/woodwork/3lights2.jpg",
+         "thumbUrl" : "img/woodwork/3lights2.jpg"
+      },
+      { 
+         "url" : "img/woodwork/3lights3.jpg",
+         "thumbUrl" : "img/woodwork/3lights3.jpg"
+      },
+      { 
+         "url" : "img/woodwork/3lights_schem.jpg",
+         "thumbUrl" : "img/woodwork/3lights_schem_thumb.jpg"
+      }
+   ]
+}

@@ -52,9 +52,9 @@ esApp.controller('MainCtrl', ['$rootScope', '$location', '$anchorScroll', '$rout
          'style': 'nav-photography'
       },
       { 
-         'name': 'woodcraft',
-         'url': 'woodcraft',
-         'style': 'nav-woodcraft'
+         'name': 'woodwork',
+         'url': 'woodwork',
+         'style': 'nav-woodwork'
       },
       { 
          'name': 'github',
@@ -77,6 +77,10 @@ esApp.controller('MainCtrl', ['$rootScope', '$location', '$anchorScroll', '$rout
 
    $http.get('models/gallery_verbalClock.json').success(function(data) {
        $scope.verbalClockImages = data;
+   });
+
+   $http.get('models/gallery_woodwork.json').success(function(data) {
+       $scope.woodworkImages = data;
    });
    $scope.isButtonActive = function(buttonName){
       return buttonName == $routeParams['categoryId'];
