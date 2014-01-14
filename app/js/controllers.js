@@ -52,11 +52,6 @@ esApp.controller('MainCtrl', ['$rootScope', '$location', '$anchorScroll', '$rout
          'style': 'nav-photography'
       },
       { 
-         'name': 'woodwork',
-         'url': 'woodwork',
-         'style': 'nav-woodwork'
-      },
-      { 
          'name': 'github',
          'url': 'github',
          'style': 'nav-github'
