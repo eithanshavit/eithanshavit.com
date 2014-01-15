@@ -290,10 +290,10 @@ li.is-broken img {
 }
 
 .gallery-container img {
-  -webkit-transition: opacity 0.5s;
-     -moz-transition: opacity 0.5s;
-      -ms-transition: opacity 0.5s;
-          transition: opacity 0.5s;
+  -webkit-transition: opacity 0.1s;
+     -moz-transition: opacity 0.1s;
+      -ms-transition: opacity 0.1s;
+          transition: opacity 0.1s;
 }
 
 .gallery-container ul {
@@ -317,7 +317,7 @@ li.is-broken img {
 
 .post-gallery {
   margin: 20px 0 60px 0;
-  height: 100px;
+  height: 104px;
 }
 
 .post-gallery img {
