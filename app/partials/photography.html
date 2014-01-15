@@ -5,49 +5,40 @@
    <a ng-click="scrollTo('more')">More</a>
 </div>
 <a id="asia"><h1>Some photos I took while travelling in Asia</h1></a>
-<div class="gallery-container">
-   <ul>
-      <li class="is-loading" ng-repeat="image in galleryEastImages">
-         <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-      </li>
-   </ul>
+<div class="images-loaded-container">
+   <div class="gallery-container">
+      <ul>
+         <li class="is-loading" ng-repeat="image in galleryEastImages" images-loaded>
+            <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+         </li>
+      </ul>
+   </div>
 </div>
 <a id="israel"><h1>From around Israel</h1></a>
-<div class="gallery-container">
-   <ul>
-      <li class="is-loading" ng-repeat="image in galleryIsraelImages">
-         <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-      </li>
-   </ul>
+<div class="images-loaded-container">
+   <div class="gallery-container">
+      <ul>
+         <li class="is-loading" ng-repeat="image in galleryIsraelImages" images-loaded>
+            <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+         </li>
+      </ul>
+   </div>
 </div>
 <a id="more"><h1>Some more photos</h1></a>
-<div class="gallery-container">
-   <ul>
-      <li class="is-loading" ng-repeat="image in galleryMoreImages">
-         <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-      </li>
-   </ul>
+<div class="images-loaded-container">
+   <div class="gallery-container">
+      <ul>
+         <li class="is-loading" ng-repeat="image in galleryMoreImages" images-loaded>
+            <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+         </li>
+      </ul>
+   </div>
 </div>
 <h2>Even more on my <a target="_blank" href="http://www.flickr.com/photos/eithanshavit/sets/">Flickr page</a>.</h2>
 <br>
 <br>
 <br>
 <script>
-   $(function() {
-      var container = $('.gallery-container');
-      var imgLoad = imagesLoaded( container );
-      imgLoad.on( 'progress', onProgress );
-
-      // triggered after each item is loaded
-      function onProgress( imgLoad, image ) {
-        // change class if the image is loaded or broken
-        image.img.parentNode.className = image.isLoaded ? '' : 'is-broken';
-      }
-
-   });
-
-</script>
-<script type="text/javascript">
    $(document).ready(function() {
       $('.fancybox').fancybox({
         padding: 0,

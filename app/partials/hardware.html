@@ -9,6 +9,7 @@
         }
       });
    });
+   
 </script>
 <div class="post">
    <div class="post-intro">
@@ -37,12 +38,14 @@
       as the brain, connected to many LEDs. The front panel is laser cut from Acrylic
       plastic, and each LED sits behind a word cutout and lights up when the time is
       right. The whole thing goes into a nice wooden frame.</p>
-      <div class="post-gallery gallery-container">
-         <ul>
-            <li class="is-loading" ng-repeat="image in verbalClockImages['final']">
-               <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-            </li>
-         </ul>
+      <div class="images-loaded-container">
+         <div class="post-gallery">
+            <ul>
+               <li class="is-loading" ng-repeat="image in verbalClockImages['final']" images-loaded>
+                  <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+               </li>
+            </ul>
+         </div>
       </div>
 
       <p>Creating all parts of the project by myself (except for the Arduino),
@@ -79,35 +82,41 @@
       target="_blank" href="http://oshpark.com/">OSH Park</a> is a great community that combines PCB
       designs from its members to efficiently fabricate small boards onto a large
       one, and keep costs down.</p>
-      <div class="post-gallery gallery-container">
-         <ul>
-            <li class="is-loading" ng-repeat="image in verbalClockImages['hardware']">
-               <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-            </li>
-         </ul>
+      <div class="images-loaded-container">
+         <div class="post-gallery">
+            <ul>
+               <li class="is-loading" ng-repeat="image in verbalClockImages['hardware']" images-loaded>
+                  <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+               </li>
+            </ul>
+         </div>
       </div>
 
       <h2>Plastics</h2>
 
       <p>I used vector graphics to create a precise design of the front panel, and
       sent it to <a target="_blank" href="http://ponoko.com/">Ponoko</a> to laser cut it.</p>
-      <div class="post-gallery gallery-container">
-         <ul>
-            <li class="is-loading" ng-repeat="image in verbalClockImages['plastics']">
-               <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-            </li>
-         </ul>
+      <div class="images-loaded-container">
+         <div class="post-gallery">
+            <ul>
+               <li class="is-loading" ng-repeat="image in verbalClockImages['plastics']" images-loaded>
+                  <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+               </li>
+            </ul>
+         </div>
       </div>
 
       <h2>Wood Crafting</h2>
 
       <p>My friend's father, a carpenter, helped me create a wooden frame to hold my Hardware.</p>
-      <div class="post-gallery gallery-container">
-         <ul>
-            <li class="is-loading" ng-repeat="image in verbalClockImages['craft']">
-               <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-            </li>
-         </ul>
+      <div class="images-loaded-container">
+         <div class="post-gallery">
+            <ul>
+               <li class="is-loading" ng-repeat="image in verbalClockImages['craft']" images-loaded>
+                  <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+               </li>
+            </ul>
+         </div>
       </div>
    </div>
 </div>

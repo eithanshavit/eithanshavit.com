@@ -4,9 +4,7 @@
 
 var esApp = angular.module('eithanshavit.controllers', []);
 
-esApp.controller('MainCtrl', ['$rootScope', '$location', '$anchorScroll', '$route', '$scope', '$http', '$routeParams', function($rootScope, $location, $anchorScroll, $route, $scope, $http, $routeParams){
-   this.$routeParams = $routeParams;
-   this.$route = $route;
+esApp.controller('MainCtrl', ['$location', '$anchorScroll', '$route', '$scope', '$http', '$routeParams', function($location, $anchorScroll, $route, $scope, $http, $routeParams){
 
    $scope.scrollTo = function(id) {
        var old = $location.hash();
@@ -85,6 +83,7 @@ esApp.controller('MainCtrl', ['$rootScope', '$location', '$anchorScroll', '$rout
    $scope.isButtonActive = function(buttonName){
       return buttonName == $routeParams['categoryId'];
    };
+
   }]);
 
 function shuffle(o) {

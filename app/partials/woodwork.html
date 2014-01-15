@@ -10,21 +10,6 @@
       });
    });
 </script>
-<script>
-   $(function() {
-      var container = $('.gallery-container');
-      var imgLoad = imagesLoaded( container );
-      imgLoad.on( 'progress', onProgress );
-
-      // triggered after each item is loaded
-      function onProgress( imgLoad, image ) {
-        // change class if the image is loaded or broken
-        image.img.parentNode.className = image.isLoaded ? '' : 'is-broken';
-      }
-
-   });
-
-</script>
 
 <div class="post">
    <div class="post-intro">
@@ -42,12 +27,14 @@
       <h1>Pendent Lights</h1>
       <p>We recently moved into a new place, and we were looking for pendent lights for our bathroom. After a long search we could not find anything that suited our budget and needs.</p>
       <p>I made these lights with some parts I found on the web, and a wooden canopy I designed and carved on the <a target="_blank" href="http://www.shopbottools.com/">ShopBot</a>.</p>
-      <div class="post-gallery gallery-container">
-         <ul>
-            <li class="is-loading" ng-repeat="image in woodworkImages['pendent']['images']">
-               <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
-            </li>
-         </ul>
+      <div class="images-loaded-container">
+         <div class="post-gallery">
+            <ul>
+               <li class="is-loading" ng-repeat="image in woodworkImages['pendent']['images']" images-loaded>
+                  <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+               </li>
+            </ul>
+         </div>
       </div>
    </div>
 </div>
