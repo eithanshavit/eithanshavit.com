@@ -274,8 +274,7 @@ h2 {
   margin: 0 0px 0px 4px;
 }
 .is-loading {
-  background-image: url('../img/loading.gif');
-  background-color: black;
+  background-color: #F7F7F7;
   min-width: 100px;
 }
 
@@ -290,10 +289,10 @@ li.is-broken img {
 }
 
 .gallery-container img {
-  -webkit-transition: opacity 0.1s;
-     -moz-transition: opacity 0.1s;
-      -ms-transition: opacity 0.1s;
-          transition: opacity 0.1s;
+  -webkit-transition: opacity 1.1s;
+     -moz-transition: opacity 1.1s;
+      -ms-transition: opacity 1.1s;
+          transition: opacity 1.1s;
 }
 
 .gallery-container ul {
@@ -321,10 +320,10 @@ li.is-broken img {
 }
 
 .post-gallery img {
-  -webkit-transition: opacity 0.5s;
-     -moz-transition: opacity 0.5s;
-      -ms-transition: opacity 0.5s;
-          transition: opacity 0.5s;
+  -webkit-transition: opacity 1.2s;
+     -moz-transition: opacity 1.2s;
+      -ms-transition: opacity 1.2s;
+          transition: opacity 1.2s;
 }
 
 .post-gallery ul {
