@@ -49,7 +49,7 @@
             <div id='logo'>
                <a href="#/about"><img id='logo' ng-src="img/logo.png"></a>
             </div>
-            <a ng-repeat="button in navButtons" id="{{button.style}}" class="{{isButtonActive(button.name) ? 'nav-active' : ''}}" href="#/{{button.url}}">{{button.name}}</a>
+            <a ng-repeat="button in navButtons" id="{{button.style}}" class="{{isButtonActive(button.name) ? 'nav-active' : ''}}" href="{{button.url}}">{{button.name}}</a>
          </div>
          <div id="content">
             <div class="view-animate-container">

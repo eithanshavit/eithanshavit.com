@@ -98,12 +98,12 @@ body {
    color: #fff;
 }
 
-#nav-github.nav-active {
+#nav-code.nav-active {
    background: #E7DE00;
    color: #fff;
 }
 
-#nav-github:hover {
+#nav-code:hover {
    background: #E7DE00;
    color: #fff;
 }

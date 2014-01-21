@@ -26,38 +26,38 @@ esApp.controller('MainCtrl', ['$location', '$anchorScroll', '$route', '$scope', 
    $scope.navButtons = [
       { 
          'name': 'about',
-         'url': 'about',
+         'url': '#/about',
          'style': 'nav-about'
       },
       { 
          'name': 'websites',
-         'url': 'websites',
+         'url': '#/websites',
          'style': 'nav-websites'
       },
       { 
          'name': 'apps',
-         'url': 'apps',
+         'url': '#/apps',
          'style': 'nav-apps'
       },
       { 
          'name': 'hardware',
-         'url': 'hardware',
+         'url': '#/hardware',
          'style': 'nav-hardware'
       },
       { 
          'name': 'photography',
-         'url': 'photography',
+         'url': '#/photography',
          'style': 'nav-photography'
       },
       { 
          'name': 'woodwork',
-         'url': 'woodwork',
+         'url': '#/woodwork',
          'style': 'nav-woodwork'
       },
       { 
-         'name': 'github',
-         'url': 'github',
-         'style': 'nav-github'
+         'name': 'code',
+         'url': 'https://github.com/oogiyot?tab=repositories',
+         'style': 'nav-code'
       },
    ];
 
