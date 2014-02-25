@@ -3,6 +3,7 @@
 <head>
    <meta charset="utf-8">
    <title>Eithan Shavit</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="css/app.css"/>
    <!-- jQuery -->
    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -44,12 +45,12 @@
 </head>
 <body>
    <div ng-controller="MainCtrl as main">
-      <div id="main-container" class="ng-cloak">
+      <div id="main-container" class="ng-cloak container">
          <div id="nav">
             <div id='logo'>
                <a href="#/about"><img id='logo' ng-src="img/logo.png"></a>
             </div>
-            <a ng-repeat="button in navButtons" id="{{button.style}}" class="{{isButtonActive(button.name) ? 'nav-active' : ''}}" href="{{button.url}}">{{button.name}}</a>
+            <a ng-repeat="button in navButtons" ng-click="scrollTo('content')" id="{{button.style}}" class="{{isButtonActive(button.name) ? 'nav-active' : ''}}" href="{{button.url}}">{{button.name}}</a>
          </div>
          <div id="content">
             <div class="view-animate-container">
