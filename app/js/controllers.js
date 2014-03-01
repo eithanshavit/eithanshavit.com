@@ -48,7 +48,7 @@ esApp.controller('MainCtrl', ['$location', '$anchorScroll', '$route', '$scope', 
       },
       { 
          'name': 'code',
-         'url': 'https://github.com/oogiyot?tab=repositories',
+         'url': 'https://github.com/eithanshavit?tab=repositories',
          'style': 'nav-code'
       },
    ];
