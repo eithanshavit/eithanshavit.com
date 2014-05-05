@@ -61,6 +61,12 @@
          [
             {
                "name" : "clock_1",
+               "url" : "https://s3-us-west-1.amazonaws.com/eithanshavit.com/img/gallery/woodwork/clock/full/8.jpg",
+               "thumbUrl" : "https://s3-us-west-1.amazonaws.com/eithanshavit.com/img/gallery/woodwork/clock/thumbs/8.jpg",
+               "category" : "clock"
+            },
+            {
+               "name" : "clock_2",
                "url" : "https://s3-us-west-1.amazonaws.com/eithanshavit.com/img/gallery/woodwork/clock/full/7.jpg",
                "thumbUrl" : "https://s3-us-west-1.amazonaws.com/eithanshavit.com/img/gallery/woodwork/clock/thumbs/7.jpg",
                "category" : "clock"
