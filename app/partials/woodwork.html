@@ -14,6 +14,38 @@
 <div class="post">
    <div class="post-intro">
       <div class="post-logo">
+         <img alt="" ng-src="{{woodworkImages['levelLamp']['logoUrl']}}"/>
+      </div>
+      <div class="post-desc">
+         <ul>
+            <li>2014</li>
+            <li>Autodesk Inventor</li>
+            <li>Adobe Illustrator</li>
+            <li>ShopBot CNC Router</li>
+         </ul>
+      </div>
+   </div>
+   <div class="post-content">
+      <h1>Level Lamp</h1>
+      <p>The inspiration for this unique desk lamp comes from a stone candle holder my sister got at the 
+         <a target="_blank" href="http://japaneseteagardensf.com/">Japanese Tea Garden</a> in San Francisco.</p>
+      <p>I had the design planned in my head, but making an accurate sketch was difficult to do by hand. I created a complete 3D model of the lamp using Autodesk Inventor. That helped me tweak the design to look just right.
+         I then used Illustrator to layout the 2D parts to cut, and carved it on the ShopBot.</p>
+      <p>A standard light bulb is held by a porcelain socket, and wired using a colorful cord I got at <a target="_blank" href="http://www.colorcord.com/">Color Code Company</a>.</p>
+      <div class="images-loaded-container">
+         <div class="post-gallery">
+            <ul>
+               <li class="is-loading" ng-repeat="image in woodworkImages['levelLamp']['images']" images-loaded>
+                  <a class="fancybox" href="{{image.url}}" rel="lightbox[{{image.category}}]"><img ng-src="{{image.thumbUrl}}" alt="" /></a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="post">
+   <div class="post-intro">
+      <div class="post-logo">
          <img alt="" ng-src="{{woodworkImages['pendent']['logoUrl']}}"/>
       </div>
       <div class="post-desc">
