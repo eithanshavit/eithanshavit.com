@@ -6,4 +6,5 @@ tmp
 *.swp
 *.swo
 *.swn
+*.swm
 app.yaml
